@@ -1,10 +1,10 @@
 <!doctype html>
-<!-- UPLOADED OCT22018TUES project from codeSmartAcademy-->
+<!-- UPLOADED OCT22018TUE project from codeSmartAcademy-->
 <html lang="en">
 <head>
     <meta charset = "utf-8">
     <meta http-equiv = "X-UA-Compatible" content = "ie-edge">
-    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="numberA5SEP23SUN.css">
         <title>Guess the Magic Number</title>    
 </head>
 
@@ -14,18 +14,17 @@
     <div id="container">
         <div class="panel">
             <div class="panel1">
-                <h3>Are you Average, Smart, or Genius with Numbers</h3>
-                <p>Try to guess our 'Computer-Generated Number' between 1 to 100</p>
-                <p>First, choose a <em>'Difficulty Level button'</em> below to test your Intelligence!</p>
-                <h4>Can 'Human Intelligence' beat 'Artificial Intelligence"? ..... Show Me!!!</h4>              
-                
+                <h3>Can 'Artificial Intelligence' beat 'Human Intelligence' ? ..... Show Me!!!</h3>   
+                <h3>Are you Average, Smart, or a Genius with Numbers</h3>                
+                <p>Try to guess our 'Computer-Generated Number' between 1 to 100</p>             
+                <p>Choose a <em>'Difficulty Level button'</em> below to test your 'Human Intelligence'</p>
             </div>
         </div>
         <div class="panel">
             <div class="panel2">
-            <button id="easyBtn" onclick="easyMode()" class=""><strong><span style="color:#0000ff">click this <em>'Easy button':</em></span> and guess in 12 attempts(default)</strong></button>
-            <button id="hardBtn" onclick="hardMode()" class=""><strong><span style="color:#0000ff">click this <em>'Hard Button'</em></span> and guess in 9 attempts</strong></button>
-            <button id="geniusBtn" onclick="geniusMode()" class=""><strong><span style="color:#0000ff">click this <em>'Genius Button'</em></span> and guess in 6 attempts</strong></button>
+            <button id="easyBtn" onclick="easyMode()" class=""><strong><span style="color:green"><em>Easy button</em></span>: Guess in 12 attempts(default)</strong></button>
+            <button id="hardBtn" onclick="hardMode()" class=""><strong><span style="color:#00ff00"><em>Hard Button</em></span>: Guess in 9 attempts</strong></button>
+            <button id="geniusBtn" onclick="geniusMode()" class=""><strong><span style="color:#00ff00"><em>Genius Button</em></span>: Guess in 6 attempts</strong></button>
             <button id="newGameButton" onclick="newGame()">NEW GAME</button>
             </div>
         </div>
@@ -34,7 +33,7 @@
             <div class="panel3">            
             <input type="number" id="inputBox" style="color:#000;" onchange="compareGuess()" autocomplete="off">
             <!-- placeholder="1]Click a button above. 2]Type your Guesses here. 3]Then press enter." -->
-                <p style="font-size:16px;">These are your 'Human Guesses' you have made ... so far:</p>
+                <p style="font-size:20px;">What are the 'Human Guesses' you made ... So far?:</p>
                 <p id="guessLog"></p> 
             
             </div>
@@ -42,7 +41,7 @@
         
         <div class="panel">
         <div class="panel4">
-            <p style="font-size:16px;">This is 'How Many Guesses' you have made ... so far: <span id="attempts"></span></p> 
+            <p style="font-size:20px;">How many 'Human Guesses' have you made ... So far?: <span id="attempts"></span></p> 
             <h3 id="textOutput"></h3>
             
 <!--            <p style="color:forestgreen">(How to win: Split the difference between 1 to 100. Try 55. Then guess higher or lower.)</p> -->

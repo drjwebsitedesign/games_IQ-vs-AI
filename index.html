@@ -20,6 +20,7 @@
                 <p>Choose a <em>'Difficulty Level button'</em> below to test your 'Human Intelligence'</p>
             </div>
         </div>
+		
         <div class="panel">
             <div class="panel2">
             <button id="easyBtn" onclick="easyMode()" class=""><strong><span style="color:green"><em>Easy button</em></span>: Guess in 12 attempts(default)</strong></button>
@@ -28,26 +29,26 @@
             <button id="newGameButton" onclick="newGame()">NEW GAME</button>
             </div>
         </div>
+		
+		
+		<div class="panel">
+			<div class="panel4">
+				<p style="font-size:20px;">How many 'Human Guesses' have you made ... So far?: <span id="attempts"></span></p> 
+				<h3 id="textOutput"></h3            
+	<!--            <p style="color:forestgreen">(How to win: Split the difference between 1 to 100. Try 55. Then guess higher or lower.)</p> -->            
+			</div>
+        </div>
+		
         
         <div class="panel">
             <div class="panel3">            
-            <input type="number" id="inputBox" style="color:#000;" onchange="compareGuess()" autocomplete="off">
-            <!-- placeholder="1]Click a button above. 2]Type your Guesses here. 3]Then press enter." -->
+            <input type="number" id="inputBox" style="color:#000;" onchange="compareGuess()" autocomplete="off">            
                 <p style="font-size:20px;">What are the 'Human Guesses' you made ... So far?:</p>
-                <p id="guessLog"></p> 
-            
+                <p id="guessLog"></p>             
             </div>
         </div>
         
-        <div class="panel">
-        <div class="panel4">
-            <p style="font-size:20px;">How many 'Human Guesses' have you made ... So far?: <span id="attempts"></span></p> 
-            <h3 id="textOutput"></h3>
-            
-<!--            <p style="color:forestgreen">(How to win: Split the difference between 1 to 100. Try 55. Then guess higher or lower.)</p> -->
-            
-        </div>
-        </div>
+        
     
     
     <script>

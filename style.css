@@ -1,0 +1,99 @@
+html {
+    margin: 0px;
+    background: whitesmoke;
+}
+
+body {
+    background: whitesmoke;
+    color: #0000ff;
+}
+
+#container {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+    font-family: arial;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    background: #ff00ff;
+    opacity: .93;
+    
+}
+
+.panel {
+    max-width: 80%;
+    margin: 5px auto;
+    border-radius: 10px;
+    padding: 5px;    
+    background-color: whitesmoke;
+    opacity: 1.10;    
+}
+
+.panel1 {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    paddi -50px;
+    colo #ff00ff;
+    font-size: 18px;        
+    line-height: 8px;
+    color: #0000ff;
+}
+
+.panel2 {
+    background: url(images/guessMagicNumber1.jpg);
+    background-size: contain;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.panel3 {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    background-ima url("images/guessMagicNumber1.jpg");*/
+    max-width: 0%;
+    padding: 0px;
+    color: blue;
+}
+
+.panel4 {
+    margin-to -20px;
+    margin-botto -10px;
+    background-ima url("images/guessMagicNumber1.jpg");*/
+    max-widt 0%;
+    paddin 0px;
+    color: blue;
+}
+
+button {
+    background: #ff00ff;
+    height: 2.5em;
+    width: 85%;
+    margin-bottom: 1.0em;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-size: 0.8em;
+}
+
+input {
+    border-radius: 10px;
+    width: 80%;
+    height: 2.25em;
+    text-align: center;
+    font-size: 16px;
+    color: #ff00ff;
+}
+
+.activeButton {
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+

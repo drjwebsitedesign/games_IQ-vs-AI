@@ -8,7 +8,7 @@
 	<meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="style.css">
     
-        <title>AI vs IQ</title>    
+        <title>AI</title>    
 </head>
 
         
@@ -23,10 +23,10 @@
         <!-- LOAD THE GAME WHEN THE WINDOW.DOCUMENT LOADS. -->
         <header class="panel">
             <div class="panel1">
-                <h3>AI vs IQ: Can 'Artificial Intelligence' beat 'Human Intelligence'?</h3>   
-                <h3>Are you Average, Smart, or a Genius with Numbers? ... then show us!</h3>                
-                <p>Can you guess the number our computer generated between 1 to 100?</p>    
-                <p>Choose a <em>'Difficulty Level button'</em> below and test your IQ against our AI</p>
+                <h3>IQ vs AI: Can <strong><em>Human</em></strong> Intelligence <span>beat</span><strong><em> Artificial</em></strong> Intelligence?</h3>   
+                <h3>Are you Average, Smart, or a Genius with Numbers?</h3>                
+                <p>What number would you choose to try to guess?</p>    
+                <p>Choose a <strong><em>Difficulty Level</em></strong> below and test your IQ against our AI</p>
             </div>
         </header>
 		
@@ -34,32 +34,33 @@
         <!-- GIVE THE PLAYERS A CHALLENGE OF 3 DIFFERENT 'DIFFICULTY BUTTONS'. -->
         <nav class="panel">
             <section class="panel2">
-            <button id="easyBtn" onclick="easyMode()" class=""><strong><span style="color:#00ff00"><em>Easy button:</em></span> Guess in 12 attempts(default)</strong></button>
-            <button id="hardBtn" onclick="hardMode()" class=""><strong><span style="color:#00ff00"><em>Hard button:</em></span> Guess in 9 attempts</strong></button>
-            <button id="geniusBtn" onclick="geniusMode()" class=""><strong><span style="color:#00ff00"><em>Genius button:</em></span> Guess in 6 attempts</strong></button>
+            <button id="easyBtn" onclick="easyMode()" class=""><strong><span style="color:#00ff00"><em>EASY:</em></span>  Guess in 12 attempts (default)</strong></button>
+            <button id="hardBtn" onclick="hardMode()" class=""><strong><span style="color:#00ff00"><em>HARD:</em></span> Guess in 9 attempts</strong></button>
+            <button id="geniusBtn" onclick="geniusMode()" class=""><strong><span style="color:#00ff00"><em>GENIUS:</em></span> Guess in 6 attempts</strong></button>
             <button id="newGameButton" onclick="newGame()">NEW GAME</button>
             </section>
         </nav>
 		
         
-        <!-- TELL THE PLAYERS HOW MANY GUESSES THEY HAVE LEFT. -->
-        <section class="panel">
-			<div class="panel4">
-				<p style="font-size:20px;">How many 'Human Guesses' have you made ... So far?: <span id="attempts"></span></p> 
-                <h3 id="textOutput"></h3>
-			</div>
-        </section>
+        
 		
         
         <!-- SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED. -->
         <section class="panel">
             <div class="panel3">            
             <input type="number" id="inputBox" style="color:#000;" onchange="compareGuess()" autocomplete="off">            
-                <p style="font-size:20px;">What are the 'Human Guesses' you made ... So far?:</p>
+                <p style="font-size:20px;">What are your Human Guesses that you have tried ..... So Far?</p>
                 <p id="guessLog"></p>             
             </div>
         </section>
         
+        <!-- TELL THE PLAYERS HOW MANY GUESSES THEY HAVE LEFT. -->
+        <section class="panel">
+			<div class="panel4">
+				<p style="font-size:20px;">How many of your Human Guesses have you used up ..... So Far? <span id="attempts"></span></p> 
+                <h3 id="textOutput"></h3>
+			</div>
+        </section>
         
     <script>
         // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
@@ -155,6 +156,8 @@
         
     }       
     </script>    
+    
+<p class="saasApps">Customized SaaS Apps by: DR_J_websiteDESIGN.com</p>    
     
 </body>
 </html>

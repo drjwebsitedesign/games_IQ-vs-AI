@@ -1,163 +1,101 @@
 <!doctype html>
-        <!-- UPLOADED OCT22018TUE project from codeSmartAcademy-->
+        <!-- UPLOADED OCT22018TUE the original project code (before my modified version) is from codeSmart.academy-->
 <html lang="en">
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-mobile.css">
     
-        <title>AI</title>    
+        <title>IQ vs AI</title>    
 </head>
-
-        
     
-        <!-- LOAD THE GAME WHEN WINDOW.DOCUMENT LOADS. -->
+<!--load the game when the window.document loads-->
 <body onload="init()">
     
-        <!-- ES6 HTML SEMANTIC TAGS FOR BETTER SEO RESULTS. -->
+        <!--change es5 tags to html semantic tags for better seo and browser results.-->
     <div id="container">
-        
-        
-        <!-- LOAD THE GAME WHEN THE WINDOW.DOCUMENT LOADS. -->
-        <header class="panel">
+        <section class="panel">
             <div class="panel1">
-                <h3>IQ vs AI: Can <strong><em>Human</em></strong> Intelligence <span>beat</span><strong><em> Artificial</em></strong> Intelligence?</h3>   
-                <h3>Are you Average, Smart, or a Genius with Numbers?</h3>                
-                <p>What number would you choose to try to guess?</p>    
-                <p>Choose a <strong><em>Difficulty Level</em></strong> below and test your IQ against our AI</p>
+                <p><span style="font-weight:600">IQ vs AI:</span> Can <strong><em>Human</em></strong> Intelligence <span>beat</span><strong><em> Artificial</em></strong> Intelligence</p>
+                <h3 class="desktopAvSmartGen">Are you Average, Smart, or a Genius with Numbers</h3>   
+                <h3 class="mobileAvSmartGen">Are you Average, Smart, or <br/>a Genius with Numbers</h3>
+                <p>Choose a <strong><em>Difficulty Level button</em></strong> and Guess our AI number</p>
             </div>
-        </header>
+        </section>
+<!--
+        <section class="mobilePanel1">
+            <div class="mobilePanel1">
+                <p><span style="font-weight:600">IQ vs AI:</span> Can <strong><em>Human</em></strong> Intelligence <span>beat</span><strong><em> Artificial</em></strong> Intelligence?</p>   
+                <h3 class="avSmartGen">Are you Average, Smart, or <br/>a Genius with Numbers?</h3>
+                <p>Choose a <strong><em>Difficulty Level button</em></strong> and Guess our AI number!</p>
+            </div>
+        </section>
+-->
 		
         
-        <!-- GIVE THE PLAYERS A CHALLENGE OF 3 DIFFERENT 'DIFFICULTY BUTTONS'. -->
-        <nav class="panel">
-            <section class="panel2">
+        <!--give the players a challenge with 3 different 'Difficulty-Level buttons'-->
+<!--
+        <section class="panel" class="desktopPanel2">
+            <article class="panel2">
             <button id="easyBtn" onclick="easyMode()" class=""><strong><span style="color:#00ff00"><em>EASY:</em></span>  Guess in 12 attempts (default)</strong></button>
             <button id="hardBtn" onclick="hardMode()" class=""><strong><span style="color:#00ff00"><em>HARD:</em></span> Guess in 9 attempts</strong></button>
             <button id="geniusBtn" onclick="geniusMode()" class=""><strong><span style="color:#00ff00"><em>GENIUS:</em></span> Guess in 6 attempts</strong></button>
             <button id="newGameButton" onclick="newGame()">NEW GAME</button>
-            </section>
-        </nav>
-		
+            </article>
+        </section>
+-->
+       <section class="panel 2" class="mobilePanel2" class="mobile-Panel"> 
+<!--       <section class="panel" class="panel 2" class="mobilePanel2">-->
+            <article>
+            <button id="easyBtn"  class="mobileButton" onclick="easyMode()" class=""><strong><span style="color:#00ff00"><em>EASY:</em></span> Guess in 12 attempts</strong></button>
+            <button id="hardBtn"  class="mobileButton" onclick="hardMode()" class=""><strong><span style="color:#00ff00"><em>HARD:</em></span> Guess in 9 attempts</strong></button>
+            <button id="geniusBtn"  class="mobileButton" onclick="geniusMode()" class=""><strong><span style="color:#00ff00"><em>GENIUS:</em></span> Guess in 6 attempts</strong></button>
+            <button id="newGameButton" onclick="newGame()">NEW GAME</button>
+            </article>
+        </section>
         
         
-		
-        
+		      
         <!-- SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED. -->
-        <section class="panel">
+        <section class="panel 3">
+<!--        <section class="panel">-->
             <div class="panel3">            
-            <input type="number" id="inputBox" style="color:#000;" onchange="compareGuess()" autocomplete="off">            
-                <p style="font-size:20px;">What are your Human Guesses that you have tried ..... So Far?</p>
-                <p id="guessLog"></p>             
+            <input type="number" id="inputBox" onchange="compareGuess()" autocomplete="off" placeholder="Choose a 'Difficulty-Level button' above. Then enter your 1st guess here." style="color:#000; font-size:20px;">            
+<!--                <p style="font-size:20px;" class="mobileTextContent"><span class="mobileTextContent" style="font-weight:600"><em>Which</em></span> Human Guesses have you tried ..... So Far?</p>-->
+               <p class="mobileTextContent"><span><em>What</em></span> are your Human Guesses, So Far?</p>
+                
+                <!--show the players each guess that they try-->
+                <p id="guessLog" style="color:orangered; font-size:22px;" class="innerhtmlColour"></p>
+                
+                <!--tell the players to "guess higher" or "guess lower"-->    
+                <h3 id="textOutput" class="innerhtmlColour" style="color:red"></h3>         
             </div>
         </section>
         
-        <!-- TELL THE PLAYERS HOW MANY GUESSES THEY HAVE LEFT. -->
-        <section class="panel">
+        
+        <!--show THE PLAYERS HOW MANY GUESSES THEY HAVE LEFT. -->
+        <section class="panel 4">
+<!--        <section class="panel">-->
 			<div class="panel4">
-				<p style="font-size:20px;">How many of your Human Guesses have you used up ..... So Far? <span id="attempts"></span></p> 
-                <h3 id="textOutput"></h3>
+            
+        <!--show the players how many guesses they have used up-->
+				<p class="desktopContentPanel4"><span><em>How many</em></span> Human Guesses have you tried ..... So Far? <span id="attempts" class="innerhtmlColour" style="color:orangered; font-size:22px;"></span></p> 
+				<p class="mobileContentPanel4"><span><em>How many</em></span> Human Guesses<br/>have you tried ..... So Far? <span id="attempts" class="innerhtmlColour" style="color:orangered; font-size:22px;"></span></p> 
 			</div>
         </section>
         
-    <script>
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        var computerGuess;
-        var userGuessLog = [];
-        var attempts = 0;
-        var maxGuesses = 12;
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        function gameEnded() {
-           document.getElementById("newGameButton").style.display="inline";
-           document.getElementById('easyBtn').style.display = 'none';
-           document.getElementById('hardBtn').style.display = 'none';    
-           document.getElementById('geniusBtn').style.display = 'none';
-           document.getElementById('inputBox').setAttribute('readonly', 'readonly');    
-        }
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        function easyMode() {
-            maxGuesses = 12;
-            document.getElementById('easyBtn').className = 'activeButton';
-            document.getElementById('hardBtn').className = '';
-            document.getElementById('geniusBtn').className = '';
-        }
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        function hardMode() {
-            maxGuesses = 9;
-            document.getElementById('hardBtn').className = 'activeButton';
-            document.getElementById('easyBtn').className = '';
-            document.getElementById('geniusBtn').className = '';
-        }
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        function geniusMode() {
-            maxGuesses = 6;
-            document.getElementById('geniusBtn').className = 'activeButton';
-            document.getElementById('easyBtn').className = '';
-            document.getElementById('hardBtn').className = '';
-        }
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        function newGame() {
-            window.location.reload();
-        }
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        function init() {
-            computerGuess = Math.floor(Math.random() *100+1);
-            //console.log(computerGuess);
-        }
-        document.getElementById("newGameButton").style.display = "none";
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        function compareGuess() {
-        var userGuess = " " + document.getElementById("inputBox").value;
-            //console.log(userGuess);
-        userGuessLog.push(userGuess);
-            //console.log(userGuessLog);
-        document.getElementById("guessLog").innerHTML = userGuessLog;
-            
-        attempts++;
-        document.getElementById("attempts").innerHTML = attempts;
-        
-        // SHOW THE PLAYERS THE GUESSES THEY HAVE ALREADY TRIED.
-        if(userGuessLog.length < maxGuesses) {
-        if(userGuess > computerGuess) {
-            document.getElementById("textOutput").innerHTML = "Try again ... Go Lower!";
-            document.getElementById("inputBox").value = "";
-        } else if(userGuess < computerGuess) {
-            document.getElementById("textOutput").innerHTML = "Try again ... Go higher!";
-            document.getElementById("inputBox").value = "";
-        } else {
-            document.getElementById("textOutput").innerHTML = "Congratulations!!! You Guessed it Right<br/>with ONLY " +attempts+ " ATTEMPTS!";
-            document.getElementById("container").style.backgroundColor = "green";
-            gameEnded();            
-        }
-        } else {
-          if(userGuess > computerGuess) {
-              document.getElementById('textOutput').innerHTML = 'Sorry But You Lose!' + '<br> The number was ' + computerGuess;
-              document.getElementById("container").style.backgroundColor = "#000";
-              gameEnded();              
-        } else if (userGuess < computerGuess) {
-            document.getElementById('textOutput').innerHTML = 'Sorry But You Lose!' + '<br> The number was ' + computerGuess;
-            document.getElementById("container").style.backgroundColor = "#000";
-            gameEnded();
-        } else {
-            document.getElementById('textOutput').innerHTML = "Congratulations!!! You Guessed It Right<br/>with ONLY " +attempts+ " ATTEMPTS!";
-            document.getElementById("container").style.backgroundColor = "green";
-            gameEnded();
-        }
-      }
-        
-    }       
-    </script>    
-    
-<p class="saasApps">Customized SaaS Apps by: DR_J_websiteDESIGN.com</p>    
-    
+    <script src="js/script.js"></script>     
+                           
+<footer class="saasApps">
+    <!--send all players to play more free games at the website.-->
+    <!--send customers to website to purchase customized SaasApps-->
+    <p class="desktopFooter">Play More Free SaasApps/Games, or, "lease-purchase" and use them to increase your customer loyalty:<a href="http://drjwebsitedesign.com">more details</a> 
+    </p>
+    <p class="mobileFooter"><a href="http://drjwebsitedesign.com">Play more Free Saas Games/Apps</a> 
+    </p>
+   </footer>     
 </body>
 </html>

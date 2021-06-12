@@ -1,0 +1,149 @@
+<!doctype html>
+<!-- UPLOADED OCT22018TUE project from codeSmartAcademy-->
+<html lang="en">
+<head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "ie-edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Guess the Magic Number</title>    
+</head>
+
+    
+<body onload="init()">
+    
+    <div id="container">
+        <div class="panel">
+            <div class="panel1">
+                <h3>Can 'Artificial Intelligence' beat 'Human Intelligence(IQ)' ?? ... then show us!</h3>   
+                <h3>Are you Average, Smart, or a Genius with Numbers</h3>                
+                <p>Can you guess the number our computer generated between 1 to 100?</p>     
+                <p>Choose a <em>'Difficulty Level button'</em> below and test your 'Human Intelligence(IQ)'</p>
+            </div>
+        </div>
+		
+        <div class="panel">
+            <div class="panel2">
+            <button id="easyBtn" onclick="easyMode()" class=""><strong><span style="color:green"><em>Easy button</em></span>: Guess in 12 attempts(default)</strong></button>
+            <button id="hardBtn" onclick="hardMode()" class=""><strong><span style="color:#00ff00"><em>Hard Button</em></span>: Guess in 9 attempts</strong></button>
+            <button id="geniusBtn" onclick="geniusMode()" class=""><strong><span style="color:#00ff00"><em>Genius Button</em></span>: Guess in 6 attempts</strong></button>
+            <button id="newGameButton" onclick="newGame()">NEW GAME</button>
+            </div>
+        </div>
+		
+		
+		<div class="panel">
+			<div class="panel4">
+				<p style="font-size:20px;">How many 'Human Guesses' have you made ... So far?: <span id="attempts"></span></p> 
+				<h3 id="textOutput"></h3            
+	<!--            <p style="color:forestgreen">(How to win: Split the difference between 1 to 100. Try 55. Then guess higher or lower.)</p> -->            
+			</div>
+        </div>
+		
+        
+        <div class="panel">
+            <div class="panel3">            
+            <input type="number" id="inputBox" style="color:#000;" onchange="compareGuess()" autocomplete="off">            
+                <p style="font-size:20px;">What are the 'Human Guesses' you made ... So far?:</p>
+                <p id="guessLog"></p>             
+            </div>
+        </div>
+        
+        
+    
+    
+    <script>
+        var computerGuess;
+        var userGuessLog = [];
+        var attempts = 0;
+        var maxGuesses = 12;
+        
+        
+        function gameEnded() {
+           document.getElementById("newGameButton").style.display="inline";
+           document.getElementById('easyBtn').style.display = 'none';
+           document.getElementById('hardBtn').style.display = 'none';    
+           document.getElementById('geniusBtn').style.display = 'none';
+           document.getElementById('inputBox').setAttribute('readonly', 'readonly');    
+        }
+        
+        
+        function easyMode() {
+            maxGuesses = 12;
+            document.getElementById('easyBtn').className = 'activeButton';
+            document.getElementById('hardBtn').className = '';
+            document.getElementById('geniusBtn').className = '';
+        }
+        
+        
+        function hardMode() {
+            maxGuesses = 9;
+            document.getElementById('hardBtn').className = 'activeButton';
+            document.getElementById('easyBtn').className = '';
+            document.getElementById('geniusBtn').className = '';
+        }
+        
+        
+        function geniusMode() {
+            maxGuesses = 6;
+            document.getElementById('geniusBtn').className = 'activeButton';
+            document.getElementById('easyBtn').className = '';
+            document.getElementById('hardBtn').className = '';
+        }
+        
+        
+        function newGame() {
+            window.location.reload();
+        }
+        
+        
+        function init() {
+            computerGuess = Math.floor(Math.random() *100+1);
+            //console.log(computerGuess);
+        }
+        document.getElementById("newGameButton").style.display = "none";
+        
+        
+        function compareGuess() {
+        var userGuess = " " + document.getElementById("inputBox").value;
+            //console.log(userGuess);
+        userGuessLog.push(userGuess);
+            //console.log(userGuessLog);
+        document.getElementById("guessLog").innerHTML = userGuessLog;
+            
+        attempts++;
+        document.getElementById("attempts").innerHTML = attempts;
+        
+        
+        if(userGuessLog.length < maxGuesses) {
+        if(userGuess > computerGuess) {
+            document.getElementById("textOutput").innerHTML = "Try again ... Go Lower!";
+            document.getElementById("inputBox").value = "";
+        } else if(userGuess < computerGuess) {
+            document.getElementById("textOutput").innerHTML = "Try again ... Go higher!";
+            document.getElementById("inputBox").value = "";
+        } else {
+            document.getElementById("textOutput").innerHTML = "Congratulations!!! You Guessed it Right<br/>with ONLY " +attempts+ " ATTEMPTS!";
+            document.getElementById("container").style.backgroundColor = "green";
+            gameEnded();            
+        }
+        } else {
+          if(userGuess > computerGuess) {
+              document.getElementById('textOutput').innerHTML = 'Sorry But You Lose!' + '<br> The number was ' + computerGuess;
+              document.getElementById("container").style.backgroundColor = "#000";
+              gameEnded();              
+        } else if (userGuess < computerGuess) {
+            document.getElementById('textOutput').innerHTML = 'Sorry But You Lose!' + '<br> The number was ' + computerGuess;
+            document.getElementById("container").style.backgroundColor = "#000";
+            gameEnded();
+        } else {
+            document.getElementById('textOutput').innerHTML = "Congratulations!!! You Guessed It Right<br/>with ONLY " +attempts+ " ATTEMPTS!";
+            document.getElementById("container").style.backgroundColor = "green";
+            gameEnded();
+        }
+      }
+        
+    }       
+    </script>    
+    
+</body>
+</html>

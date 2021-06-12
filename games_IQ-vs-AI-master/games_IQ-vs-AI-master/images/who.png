@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<!-- MY RECIPES WEBSITE PROJECT -->
+<head>
+        <title>My Recipes</title>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <!--STYLESHEET-->
+		<link rel="stylesheet" type="text/css" href="proRecipe.css">
+        <!--HTML5SHIV IN JS FOLDER-->
+        <script src="js/html5shiv.js"></script>
+</head>
+ 
+ 
+<body>    
+	    
+        <header>
+            <div class="myNameAndTitle">
+                <h1>Jerome Wilson</h1>
+                <p>Front End Web Developer and Design</p>
+            </div> 
+            
+            <div id="logo">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Bio</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>                        
+                </ul>     
+                
+            <img class="logo" src="Images/udacity-logo-redesign.png" width="50" height="" alt="alt-description"/>        
+            
+                <p>Udacity</p>               
+            </div>
+        </header>
+    
+    
+        
+        <div class="cf">
+            <h1>Featured Work</h1>
+            <div class="portfolio">
+                <a href=""><img src="images/pizza.jpg"/>
+                <p>github.com/jeromewilson</p></a>
+                
+            </div>
+            <div class="portfolio middle">
+                <a href=""><img src="images/pasta.jpg"/>
+                <p>Project 2</p></a>
+            </div>
+            
+            <div class="portfolio">
+                <a href=""><img src="images/diet.jpg"/>
+                <p>Project 3</p></a>
+            </div>
+        </div>
+</body>
+</html>
+
+

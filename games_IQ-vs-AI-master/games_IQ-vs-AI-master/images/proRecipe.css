@@ -1,0 +1,159 @@
+
+/*----------------------
+MY RECIPES WEBSITE PROJECT
+----------------------*/
+html {
+    background-col #ccc;
+    background-color: #ede6e6;
+    
+}
+
+body {
+    background-col #ede6e6;
+    backgrou radial-gradient(#9696e4, #4545ee);
+    background-color: #ccc;
+    margin: 0 auto;
+    margin-bott 10px;
+    margin-bott -50px;
+    width: 960px;
+    font-family: sans-sefig, arial, helvectica;
+}
+
+/* HEADER */
+header {
+    height: 175px;
+    margin-top: 20px;
+    margin-bott -50px;
+    padding-top: 10px;
+    color: #2d3c49;
+}
+
+
+.myNameAndTitle {
+    width: 320px;
+    float: right;
+}
+
+.myNameAndTitle ul {
+    float: right;
+    padding-right: 30px;
+    padding-top: 90px;
+    background-color: yellow;
+}
+
+#logo {
+    float: left;
+    padding-left: 12px;
+}
+
+#logo p {
+    margin: 0;
+    font-size: 18px;
+    margin-left: 45px;
+    color: #02b3e4;
+}
+
+
+ul {
+    float: right;
+    padding: 0;
+}
+
+
+li {
+    display: inline;
+    padding: 15px;
+    font-size: 16px;
+}
+
+li a:hover {
+    padding: 10px;
+    background-color: #02b3e4;
+    border: 1px solid black;
+    border-radius: 7px;
+    color: #ede6e6;
+}
+
+a {
+    text-decoration: none;
+    color: #373535;
+}
+
+a:h {
+    col #fff;
+    color: #ede6e6;
+}
+
+
+.lineBreak {
+    margin-top: -10px;
+    width: 90%;
+    height: .25em;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.featuredWork {
+        padding-left: 20px;
+        margin-top: 150px;
+        margin-bottom: -10px;
+        font-size: 30px;
+        color: #7d97ad;
+}
+    
+.portfolio {
+    position: relative;
+    float: left;
+    margin: 15px 0;
+}
+
+.portfolio img {
+    position: relative;
+    margin-left: 15px;
+}
+
+.portfolio p {
+    position: absolute;
+    width: 100%;
+    top: 12px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.portfolio a:hover {
+    background-color: #02b3e4;
+    color: #ede6e6;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.projectName {
+    text-align: center;
+}
